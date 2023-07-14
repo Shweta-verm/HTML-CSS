@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+/* import the font style from google font */
+*{
+
+    color: white;
+    text-decoration: none;
+    font-family: 'Open Sans', sans-serif;
+    /* import the font family from google font */
+    padding: 0;
+    margin: 0;
+}
+.team{
+    background-color: black;
+    position: relative;
+    width: 100%; /* in this, width in in full screen of the webpage*/
+    height: 100vh; /* in this we use viewport height(vh) to adjust the height in whatever device you are watching*/
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.team-content{
+    display: flex;
+    max-width: 80%;
+    /* max-width automatically adjust the text with image according to its preference */
+    /* height: 100vh; */
+    align-items: center;
+    text-align: center;
+    gap: 30px;
+    /* gap is used to make space b/w images */
+}
+.team-content img{
+    width: 100%;
+    height: auto;
+    /* auto atomatically adjust size of image acc. to frame size of page */
+    border-radius: 20px;
+}
+.center h1{
+    font-size: 100rem;
+    text-align: center;
+    margin-bottom: 10px;
+}
+.box{
+    background-color: rgba(85, 12, 85, 0.418);
+    border-radius: 20px;
+    padding: 10px;
+    transition: all 0.3s ease;
+    /*it gives effect to changing the size of icon within given second*/
+}
+.box h3{
+    font-size: 20px;
+    font-weight: 600;
+    color: white;
+    margin-bottom: 1.5px;
+}
+.box h5{
+    font-size: 12px;
+    font-weight: 600;
+    color: aliceblue;
+    margin-bottom: 1.5px;
+    letter-spacing: 2px;
+    text-align: center;
+}
+i{
+    font-size: 15px;
+    margin: 0 1px;
+    margin-left: 10px;
+    display: inline-block;
+    /*inline block used to seperately provide display on that particular icon*/
+}
+.box:hover{ /* different icon are there of size, color change*/
+    transform: scale(1.1);
+    cursor: pointer; /*uesd to change the curson icon by pointer*/
+
+}
+i:hover{
+    transform: scale(1.3);
+}
+
+/* MEDIA QUERIES */
+
+@media (max-width: 800px){
+    .team-content{
+        flex-direction: column;
+    }
+    .box{
+        max-width: 50%;
+    }
+    .team{
+        width: 100%;
+        height: auto;
+        /*height- used to give color or any feature throughout the whole screen*/
+        padding-top: 10%;
+        padding-bottom: 10%;
+    }
+    .center h1{
+        font-size: 10rem;
+    }
+}
+@media (max-width: 500px) {
+    .box{
+        max-width: 100%;
+    }
+}
